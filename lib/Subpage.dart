@@ -227,41 +227,41 @@ class _SubPageState extends State<SubPage> {
               ),
               Text("2.4", style: TextStyle(fontWeight: FontWeight.bold),),
               SizedBox(width: 180,),
-              RaisedButton(
-                  color: Colors.amber,
-                  child: Text('Add to Cart'),
-                  onPressed: () {
-                    // The function showDialog<T> returns Future<T>.
-                    // Use Navigator.pop() to return value (of type T).
-                    showDialog<String>(
-                      context: context,
-                      builder: (BuildContext context) => AlertDialog(
-                        title: const Text('Alert'),
-                        content: Text(
-                          'Do you want to add this item to cart',
-                        ),
-                        actions: <Widget>[
-                          FlatButton(
-                            child: Text('No'),
-                            onPressed: () => Navigator.pop(context, 'No'),
-                          ),
-                          FlatButton(
-                            child: Text('Yes'),
-                            onPressed: () => Navigator.pop(context, 'Yes'),
-                          ),
-                        ],
-                      ),
-                    ).then((returnVal) {
-                      if (returnVal != null) {
-                        Scaffold.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text('You clicked : $returnVal'),
-                            action: SnackBarAction(label: 'Yes', onPressed: () {}),
-                          ),
-                        );
-                      }
-                    });
-                  })
+              // RaisedButton(
+              //     color: Colors.amber,
+              //     child: Text('Add to Cart'),
+              //     onPressed: () {
+              //       // The function showDialog<T> returns Future<T>.
+              //       // Use Navigator.pop() to return value (of type T).
+              //       showDialog<String>(
+              //         context: context,
+              //         builder: (BuildContext context) => AlertDialog(
+              //           title: const Text('Alert'),
+              //           content: Text(
+              //             'Do you want to add this item to cart',
+              //           ),
+              //           actions: <Widget>[
+              //             // FlatButton(
+              //             //   child: Text('No'),
+              //             //   onPressed: () => Navigator.pop(context, 'No'),
+              //             // ),
+              //             // FlatButton(
+              //             //   child: Text('Yes'),
+              //             //   onPressed: () => Navigator.pop(context, 'Yes'),
+              //             // ),
+              //           ],
+              //         ),
+              //       ).then((returnVal) {
+              //         if (returnVal != null) {
+              //           Scaffold.of(context).showSnackBar(
+              //             SnackBar(
+              //               content: Text('You clicked : $returnVal'),
+              //               action: SnackBarAction(label: 'Yes', onPressed: () {}),
+              //             ),
+              //           );
+              //         }
+              //       });
+              //     })
             ],
           ),
 
